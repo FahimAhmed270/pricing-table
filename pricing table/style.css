@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;margin: 0;border: none;outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    transition: all .3s linear;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    padding: 15px 9%;
+    padding-bottom: 80px;
+    background: linear-gradient(#ccc 50%, #2980b9 50.1%);
+}
+.container .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 0;
+}
+.container .box-container .box{
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    text-align: center;
+}
+.container .box-container .box img{
+    height: 80px;
+    margin: 10px 0;
+}
+.container .box-container .box h3{
+    font-size: 25px;
+    color: #666;
+}
+.container .box-container .box .amount{
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 10px 0;
+    color: #2980b9;
+}
+.container .box-container .box .amount .price{
+    font-size: 60px;
+}
+.container .box-container .box ul li{
+    list-style: none;
+    font-size: 17px;
+    color: #666;
+    padding: 5px 0;
+}
+.container .box-container .box .btn{
+    display: inline-block;
+    font-size: 18px;
+    padding: 9px 50px;
+    background: #2980b9;
+    color: #fff;
+    border-radius: 50px;
+    margin: 15px 0;
+    transition: .2s ease-out;
+}
+.container .box-container .box .btn:hover{
+    background: #000;
+    color: #fff;
+}
+.container .price-toggler-container{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin: 10px auto;
+}
+.container .price-toggler-container span{
+    font-weight: bolder;
+    color: #666;
+    font-size: 20px;
+}
+.container .price-toggler-container .price-toggle{
+    height: 50px;
+    width: 150px;
+    position: relative;
+    border-radius: 50px;
+    cursor: pointer;
+    background: #2980b9;
+    margin: 0 10px;
+}
+.container .price-toggler-container .price-toggle::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    border-radius: 50%;
+    background: #fff;
+    width: 40px;height: 40px;
+    transition: .2s linear;
+}
+.container .price-toggler-container .price-toggle.active::before{
+    left: 100px;
+}
